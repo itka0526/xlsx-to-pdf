@@ -1,0 +1,26 @@
+{
+    "name": "nodejs_xlsx_pdf",
+    "version": "1.0.0",
+    "description": "xlsx -> pdf",
+    "main": "app.js",
+    "scripts": {
+        "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\" ",
+        "build": "npm install && npx tsc",
+        "debug:mac": "npx tsc && open -na \"Google Chrome\" \"chrome://inspect/#devices\" && node --inspect dist/app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "pdfkit": "^0.13.0",
+        "pdfkit-table": "^0.1.99",
+        "xlsx": "^0.18.5"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.9",
+        "@types/pdfkit": "^0.12.9",
+        "concurrently": "^7.5.0",
+        "nodemon": "^2.0.20",
+        "typescript": "^4.8.4"
+    }
+}
